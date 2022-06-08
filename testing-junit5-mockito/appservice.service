@@ -1,0 +1,18 @@
+[Unit]
+Description=Simple spring-boot app
+After=syslog.target network.target
+
+[Service]
+SuccessExitStatus=143
+
+Type=simple
+
+User=kgeor001
+Group=kgeor001
+
+ExecStart=java -Xms256m -Xmx512m -server -Dserver.port=8888 -jar /home/vagrant/app.jar
+ExecStop=/bin/kill -15 $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+
