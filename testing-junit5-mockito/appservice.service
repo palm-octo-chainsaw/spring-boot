@@ -6,7 +6,7 @@ After=syslog.target network.target
 SuccessExitStatus=143
 
 Type=simple
-
+#k
 ExecStart=/usr/bin/java -Xms256m -Xmx512m -server -Dserver.port=8888 -jar /home/vagrant/app.jar
 ExecStop=/bin/kill -15 $MAINPID
 
