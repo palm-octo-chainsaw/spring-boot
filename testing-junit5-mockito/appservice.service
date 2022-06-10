@@ -1,15 +1,14 @@
 [Unit]
-Description=Simple spring-boot app
-After=syslog.target network.target
+Description=Docker container as a service
+Requires=docker.service
+After=docker.service
 
 [Service]
-SuccessExitStatus=143
-
 Type=simple
-#k
-ExecStart=/usr/bin/java -Xms256m -Xmx512m -server -Dserver.port=8888 -jar /home/vagrant/app.jar
-ExecStop=/bin/kill -15 $MAINPID
+Restart=on-failure
+ExecStart=/usr/bin/docker run --rm --name service localhost:5000/app:latest
+ExecStop=/usr/bin/docker stop service
+SuccessExitStatus=2
 
 [Install]
 WantedBy=multi-user.target
-# Webhook BUILD NUMBER #32
