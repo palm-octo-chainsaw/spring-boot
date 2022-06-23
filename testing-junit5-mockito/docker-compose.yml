@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  web:
+    image: "localhost:5000/app:latest"
+    pull_policy: "always"
+    ports: 
+      - "8888:8080"
