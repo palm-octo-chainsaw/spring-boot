@@ -3,6 +3,15 @@ kind: Namespace
 metadata:
   name: dep
 ---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: regcred
+  namespace: dep
+data:
+  .dockerconfigjson: YTc3ODc4MTIzOnpsQVNWQTF6TCY=
+type: kubernetes.io/dockerconfigjson
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
