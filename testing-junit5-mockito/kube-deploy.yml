@@ -31,7 +31,7 @@ spec:
       hostNetwork: true
       containers:
       - name: app-container
-        image: 192.168.10.200:5000/app
+        image: 192.168.0.200:5000/app
         ports:
         - containerPort: 8888
       imagePullSecrets:
