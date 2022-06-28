@@ -9,7 +9,7 @@ metadata:
   name: regcred
   namespace: dep
 data:
-  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOiB7CgkJCSJhdXRoIjogIllUYzNPRGM0TVRJek9ucHNRVk5XUVRGNlRDWT0iCgkJfQoJfQp9
+  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSJsb2NhbGhvc3Q6NTAwMCI6IHsKCQkJImF1dGgiOiAiWVdSdGFXNDZZV1J0YVc0PSIKCQl9Cgl9Cn0=
 type: kubernetes.io/dockerconfigjson
 ---
 apiVersion: apps/v1
@@ -31,8 +31,7 @@ spec:
       hostNetwork: true
       containers:
       - name: app-container
-        image: hello-world 
-        command: 
+        image: app
         ports:
         - containerPort: 8888
       imagePullSecrets:
