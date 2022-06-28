@@ -9,7 +9,7 @@ metadata:
   name: regcred
   namespace: dep
 data:
-  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSIxOTIuMTY4LjEwLjIwMDo1MDAwIjogewoJCQkiYXV0aCI6ICJZV1J0YVc0NllXUnRhVzQ9IgoJCX0KCX0KfQ==
+  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSIxOTIuMTY4LjAuMjAwOjUwMDAiOiB7CgkJCSJhdXRoIjogIllXUnRhVzQ2WVdSdGFXND0iCgkJfQoJfQp9Cg==
 type: kubernetes.io/dockerconfigjson
 ---
 apiVersion: apps/v1
